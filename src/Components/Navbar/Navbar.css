@@ -55,14 +55,23 @@ nav .burger{
 }
 
 @media all and (max-width:768px){
+    nav{
+        min-height: 10vh;
+    }
+    nav .nav-links a{
+        font-size: 2.5vh;
+    }
+    nav .logo{
+        font-size: 2.5vh;
+    }
     nav .burger{
         display: block;
+        font-size: 3.2vh;
     }
-    
     nav .nav-links{
         position: absolute;
         display: block;
-        top: 0;
+        top: 10vh;
         left: 0;
         height: 100vh;
         background-color: rgba(255, 193, 191);

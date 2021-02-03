@@ -1,0 +1,72 @@
+
+.back_custom{
+    height: 90vh;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+}
+
+.back_design{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(207, 207, 207); */
+}
+
+.back_info{
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.big_orange{
+    height: 25vh;
+    width: 36.7vw;
+    background-color: rgba(255, 161, 158, 0.5);
+    margin-top: 30vh;
+    margin-left: 1.1vw;
+}
+
+.small_orange{
+    height: 2vh;
+    width: 1vw;
+    background-color: rgba(255, 161, 158, 0.5);
+    margin-top: -39vh;
+    margin-left: 72%;
+}
+
+
+.big_blue{
+    margin-top: -7vh;
+    height: 30vh;
+    width: 14vw;
+    background-color: rgba(161, 255, 239,0.7);
+    margin-left: 3vw;
+}
+
+
+.mid_blue{
+    width: 7.5vw;
+    height: 16vh;
+    background-color: rgba(161, 255, 239,0.7);
+    margin-top: 5.5vh;
+    margin-left: 59.4%;
+}
+
+
+.small_blue{
+    width: 2vw;
+    height: 5vh;
+    background-color: rgba(161, 255, 239,0.7);
+    margin-top: -51.7vh;
+    margin-left: 73.7%;
+}
+
+
+.custom_logo{
+    width: 20vw;
+    height: 45vh;
+    background-color: transparent;
+    border: 1px solid black;
+    margin-left:9vw;
+    margin-top: 12vh;
+
+}
