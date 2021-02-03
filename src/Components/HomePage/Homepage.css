@@ -7,15 +7,11 @@
     background-repeat: no-repeat;
 }
 
-
-.home__logo{
-    position: absolute;
-    margin-top: 21.6%;
-    margin-left: 15.5%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 48vh;
-    width: 18.5vw;
-    background-image: url("./logo.png");
-    /* background-color: aqua; */
+.home__info{
+    height: 99vh;
+    border-left: 30vh;
+    border-right: 20vh;
+    border-bottom: 100vw;
+    width: 100%;
+    background-color: aqua;
 }

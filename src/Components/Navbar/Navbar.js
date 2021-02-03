@@ -18,7 +18,6 @@ function Navbar() {
                 <li><a>Home</a></li>
                 <li><a>Register</a></li>
                 <li><a>Job Postings</a></li>
-                <li><a>Contact Us</a></li>
                 <li><a>About Us</a></li>
             </ul>
             <i onClick={()=>setToggle(!Toggle)} className="fas fa-bars burger"></i>
