@@ -1,58 +1,57 @@
-.main{
-    /* background-image: url("./background.png"); */
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    background-size: cover;
-    background-repeat: no-repeat;
+.main {
+  /* background-image: url("./background.png"); */
+  height: 100vh;
+  width: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.home__info{
-    height: 99vh;
-    border-left: 30vh;
-    border-right: 20vh;
-    border-bottom: 100vw;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row-reverse;
+.home__info {
+  height: 99vh;
+  border-left: 30vh;
+  border-right: 20vh;
+  border-bottom: 100vw;
+  width: 100%;
+  /* background-color: rgb(235 235 235); */
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-
-.home_info_logo{
-    height: 90vh;
-    width: 100%;
+.home_info_logo {
+  height: 90vh;
+  width: 100%;
 }
 
-.info{
-    width: 100%;
-    /* text-align: center; */
-    /* text-align: left; */
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    justify-content: space-between;
+.info {
+  width: 100%;
+  /* text-align: center; */
+  /* text-align: left; */
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: space-between;
 }
 
-.info p{
-    margin-top: 4%;
-    /* margin-bottom: 5vh; */
-    font-size: 1.2rem;
-    width: 80%;
-    margin-left: 10%;
+.info p {
+  margin-top: 4%;
+  /* margin-bottom: 5vh; */
+  font-size: 1.2rem;
+  width: 80%;
+  margin-left: 10%;
 }
 
-.info p:first-of-type{
-    margin-top: 20%;
+.info p:first-of-type {
+  margin-top: 20%;
 }
 
-.big_orange1{
-    position: absolute;
-    height: 25vh;
-    width: 36.7vw;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: -20vh;
-    margin-left: 1.1vw;
+.big_orange1 {
+  position: absolute;
+  height: 25vh;
+  width: 36.7vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -20vh;
+  margin-left: 1.1vw;
 }
