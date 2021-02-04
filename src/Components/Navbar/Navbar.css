@@ -20,7 +20,7 @@ nav{
     display: flex;
     justify-content: space-around;
     min-height: 15vh;
-    background-color: rgba(255, 161, 158, 0.9);
+    background-color: rgba(255, 161, 158, 1);
     align-items: center;
     font-family: 'Inter', sans-serif;
 }

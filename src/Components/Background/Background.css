@@ -8,6 +8,7 @@
     margin-top: 10vh;
     height: 100%;
     width: 100%;
+    animation: fadeIn ease 1.5s;
     /* background-color: rgb(207, 207, 207); */
 }
 
@@ -139,6 +140,7 @@
 
 }
 .info{   
+    /* animation: fadeIn ease 1.5s; */
     height: 0;
     border-left: 30vh;
     border-right: 20vh;
@@ -149,6 +151,7 @@
 }
 
 .back_info {
+    animation: fadeIn ease 1.5s;    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,3 +201,30 @@
     text-align: center;
     width: 80%;
 }
+
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }

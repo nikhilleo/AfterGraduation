@@ -18,12 +18,12 @@ function Background() {
             </div>
             <div className="back_info">
                 <h3>Explore Yourself !</h3>
-                <h4>With The JAVA Master Class Beginner To Expert In Full Stack Developement</h4>
+                <h4>With The <strong> JAVA Master Class</strong> Beginner To Expert In Full Stack Developement</h4>
                 <div className="quote">
                     <div className="vertical__quote"></div>
                     <p >
                         "The most important single aspect of software development is to be clear about what you are trying to build." 
-                        - Bjarne Stroustrup
+                        <strong> - Bjarne Stroustrup</strong>                    
                     </p>
                 </div>
             </div>
