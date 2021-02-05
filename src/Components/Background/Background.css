@@ -45,7 +45,11 @@
     width: 23vw !important;
   }
 }
-
+@media (max-width: 848px) {
+  .design_circle_logo > img {
+    height: 58vw;
+  }
+}
 .big_orange {
   height: 25vh;
   width: 36.7vw;

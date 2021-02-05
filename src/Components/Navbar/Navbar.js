@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Logo from "../Background/logo_transparent.png";
 
 function Navbar() {
   const [Toggle, setToggle] = useState(false);
@@ -8,7 +9,7 @@ function Navbar() {
   return (
     <div>
       <nav>
-        <div className="logo">After Graduation</div>
+        <img src={Logo} className="logo" />
         <ul
           className="nav-links"
           style={{
