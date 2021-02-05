@@ -69,6 +69,7 @@ nav .burger {
   nav .nav-links {
     position: absolute;
     display: block;
+    min-width: 206px;
     top: 10vh;
     left: 0;
     height: 100vh;

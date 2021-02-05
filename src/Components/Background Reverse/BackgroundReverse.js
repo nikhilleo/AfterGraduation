@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./BackgroundReverse.css";
 import Logo from "../Background/logo_transparent.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function BackgroundReverse() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div>
       <div
