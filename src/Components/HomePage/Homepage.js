@@ -7,7 +7,7 @@ import "./Homepage.css";
 
 function Homepage() {
   return (
-    <div className="main">
+    <div className="main" data-aos="fade-in">
       <Background />
       <BackgroundReverse />
       <Carousel />

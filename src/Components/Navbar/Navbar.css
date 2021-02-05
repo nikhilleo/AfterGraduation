@@ -34,12 +34,14 @@ nav .nav-links {
   display: flex;
   justify-content: space-between;
   width: 45%;
+  /* text-decoration: none; */
 }
 
 nav .nav-links a {
   font-size: 1rem;
   font-weight: normal;
-  cursor: pointer;
+  cursor: pointer;    
+  text-decoration: none;
 }
 
 nav .nav-links a:hover {
@@ -82,11 +84,13 @@ nav .burger {
     overflow-x: hidden;
     position: fixed;
     margin-top: -10vh;
+    text-decoration: none;
   }
 
   nav .nav-links a:hover {
     border-bottom: 0px solid black;
     cursor: default;
+    /* text-decoration: none; */
   }
 
   nav .nav-links li {
@@ -101,4 +105,9 @@ nav .burger {
 
 nav .nav-links li {
   padding: 25px;
+}
+
+a:visited{
+  color: black;
+  text-decoration: none;
 }

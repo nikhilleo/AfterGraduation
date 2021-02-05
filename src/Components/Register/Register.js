@@ -1,13 +1,118 @@
-import React from "react";
+import React, { useState } from 'react'
+import "./Register.css"
+import Axios from "../../axios";
+import { useHistory } from 'react-router-dom';
 
 function Register() {
-  return (
-    <form>
-      <input type="text" />
-      <input type="password" />
-      <button>Register</button>
-    </form>
-  );
+
+    const history = useHistory();
+
+    const [Data, setData] = useState({})
+
+    const handleSubmit = (e)=>{
+      e.preventDefault();
+      if(!Data.gender)
+      {
+        alert("Select Gender")
+      }
+      else{
+        Axios.post("/signup",Data)
+        .then((res)=>{
+          if(res.data.message=="User Created")
+          {
+            console.log(res.data)
+            localStorage.setItem("token",res.data.token)
+            localStorage.setItem("user",res.data.user.name)
+            alert("Registered")
+            history.push("/")
+          }
+        }).catch((err)=>{
+          console.log(err.response);
+        })      
+      }
+    }
+
+    const handleChange = (e)=>{
+      console.log(e.target);
+     setData((prevstate)=>{
+       return{
+       ...prevstate,
+       [e.target.name]:e.target.value
+     }
+     })
+      console.log(Data);
+    }
+    return (
+
+        <div>
+            <div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img  src="https://i.ibb.co/MgtfHQ8/sticker-png-cartoon-rocket-logo-blackandwhite-removebg-preview.png" alt="" />
+                        <h3>Explore Yourself !</h3>
+                        <p>After Graduation</p>
+
+                    </div>
+                    <div class="col-md-9 register-right">
+                    <form onSubmit={handleSubmit} >
+                    <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading"><h2>Apply </h2>  After Graduation </h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input onChange={handleChange} type="text" class="form-control" name="name"  required placeholder="Full Name *"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input onChange={handleChange} type="text" minlength="10" maxlength="10"  class="form-control"  placeholder="Your Mobile Number *" name="mobile"  required  />
+                                        </div>
+                                        <div class="form-group">
+                                            <input onChange={handleChange} type="text" minlength="10" maxlength="10"  class="form-control" name="altmobile" placeholder=" Alternate Mobile Numbers *" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input onChange={handleChange} type="email" class="form-control" placeholder="Your Email *" name="email"  required  />
+                                        </div>
+                                        <div class="form-group">
+                                            <input onChange={handleChange} type="password" class="form-control" placeholder="password *" name="password"  required  />
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="gender" onChange={handleChange} class="form-control">
+                                                <option class="hidden"  selected disabled>Gender * </option>
+                                                <option value="Female">Female</option>
+                                                <option value="Male">Male</option>
+                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="form-group">
+                                        <div class="form-group">
+                                            <input onChange={handleChange} type="text" name="qualification"  required  class="form-control" placeholder="Qualification*" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input  onChange={handleChange} type="text" name="specialization" class="form-control" placeholder="Specialization *" />
+                                        </div>
+                                        </div>
+                                        <div  class="form-group" >
+                                        <input type="submit" class="btnRegister" value="Register" />
+                                        </div>
+                                        <div  class="form-group"> 
+                                        <span >Already Registered?SignIn</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                          
+                            </div>
+                        </div>
+                    </form>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    )
 }
 
-export default Register;
+export default Register

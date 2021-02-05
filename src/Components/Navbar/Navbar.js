@@ -1,32 +1,45 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Logo from "../Background/logo_transparent.png";
 
 function Navbar() {
+
+
+  const handleLogout = ()=>{
+    window.location.reload();
+    localStorage.clear();
+  }
+
   const [Toggle, setToggle] = useState(false);
 
   return (
-    <div>
+    <div  >
       <nav>
-        <img src={Logo} className="logo" />
+        <Link to="/">
+          <img src={Logo} className="logo" />
+        </Link>
         <ul
           className="nav-links"
           style={{
             transform: Toggle ? "translateX(0px)" : "",
           }}
         >
-          <li>
-            <a>Home</a>
+          <li >
+            <Link to="/">Home</Link>
           </li>
-          <li>
-            <a>Register</a>
+          
+          <li >
+            <Link to="/Job">Job Postings</Link>
           </li>
-          <li>
-            <a>Job Postings</a>
-          </li>
-          <li>
-            <a>About Us</a>
+          <li >
+            {
+              localStorage.getItem("user") ? 
+              (<Link onClick={handleLogout}>Log Out</Link>)
+              :
+              (<Link to="/Register">{localStorage.getItem("user") ? ("LogOut") : ("Register")}</Link>)
+            }
+
           </li>
         </ul>
         <i
