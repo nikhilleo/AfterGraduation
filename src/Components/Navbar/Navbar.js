@@ -4,17 +4,16 @@ import { Link, useHistory } from "react-router-dom";
 import Logo from "../Background/logo_transparent.png";
 
 function Navbar() {
-
-
-  const handleLogout = ()=>{
+  const handleLogout = () => {
+    var txt;
     window.location.reload();
     localStorage.clear();
-  }
+  };
 
   const [Toggle, setToggle] = useState(false);
 
   return (
-    <div  >
+    <div>
       <nav>
         <Link to="/">
           <img src={Logo} className="logo" />
@@ -25,21 +24,21 @@ function Navbar() {
             transform: Toggle ? "translateX(0px)" : "",
           }}
         >
-          <li >
+          <li>
             <Link to="/">Home</Link>
           </li>
-          
-          <li >
+
+          <li>
             <Link to="/Job">Job Postings</Link>
           </li>
-          <li >
-            {
-              localStorage.getItem("user") ? 
-              (<Link onClick={handleLogout}>Log Out</Link>)
-              :
-              (<Link to="/Register">{localStorage.getItem("user") ? ("LogOut") : ("Register")}</Link>)
-            }
-
+          <li>
+            {localStorage.getItem("user") ? (
+              <Link onClick={handleLogout}>Log Out</Link>
+            ) : (
+              <Link to="/Register">
+                {localStorage.getItem("user") ? "LogOut" : "Register"}
+              </Link>
+            )}
           </li>
         </ul>
         <i
