@@ -20,11 +20,13 @@ footer {
   .footerMain {
     margin-top: 336vh !important;
   }
+  
 }
 @media screen and (max-width: 1024px), screen and(max-height:1366px) {
   .footerMain {
     margin-top: 300vh !important;
   }
+ 
 }
 
 @media screen and (max-width: 768px), screen and(max-height:1024px) {
@@ -37,6 +39,9 @@ footer {
   .footerMain {
     margin-top: 350vh !important;
   }
+  .whatsapp_app{
+    margin-left: 4px !important;
+  }
 }
 @media screen and (max-width: 414px), screen and(max-height:736px) {
   .footerMain {
@@ -47,12 +52,14 @@ footer {
   .footerMain {
     margin-top: 380vh !important;
   }
+ 
 }
 
 @media screen and (max-width: 375px), screen and(max-height:667px) {
   .footerMain {
     margin-top: 430vh !important;
   }
+  
 }
 @media screen and (max-width: 360px), screen and(max-height:640px) {
   .footerMain {
@@ -228,4 +235,7 @@ footer {
 .logo_img {
   width: 0vw;
   height: 50vh;
+}
+.whatsapp_app{
+  margin-left: 13px;
 }
