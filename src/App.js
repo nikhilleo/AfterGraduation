@@ -14,6 +14,9 @@ import { Redirect } from "react-router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./Components/Footer";
+import AdminNavbar from "./Components/Admin Navbar/AdminNavbar";
+import Admin from "./Components/Admin/Admin";
+import RegisterdStudents from "./Components/RegisterdStudents/RegisterdStudents";
 
 toast.configure();
 
@@ -70,6 +73,13 @@ function App() {
           <Route exact path="/Job">
             <Navbar />
             <Job />
+          </Route>
+          <Route exact path="/Admin/tyFAG8sBHkFc2pyZE7jJ47MSuas8496u4389hds98ds9bg">
+            <Admin/>
+          </Route>
+          <Route exact path="/Admin/tyFAG8sBHkFc2pyZE7jJ47MSuas8496u4389hds98ds9bg/registered">
+            <AdminNavbar />  
+            <RegisterdStudents/>  
           </Route>
         </Switch>
       </Router>
