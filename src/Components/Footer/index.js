@@ -19,29 +19,28 @@ function Index() {
           </h1>
         </div>
         <div class="footer-center col-md-4 col-sm-6">
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
             <i class="fa fa-map-marker"></i>
             <p> Ahmednagar</p>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
             <i class="fa fa-phone"></i>
             <p>+ 91 7020694917 </p>
           </div>
-          <div  className="whatsapp_app" style={{ display: "flex", alignItems: "center" }}>
+          <div class="ml-3" style={{ display: "flex", alignItems: "center" }}>
             <WhatsAppIcon
               style={{
                 color: "white",
                 background: "#33383b",
                 borderRadius: "50%",
                 fontSize: "2.5rem",
-                marginLeft:"-3px"
               }}
             />
-            <span  style={{ color: "white" }}>
-             <p class="ml-3 "> + 91 902887623</p>
+            <span class="ml-2" style={{ color: "white" }}>
+              +91 902887623
             </span>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
             <i class="fa fa-envelope"></i>
             <p>
               <a href="#"> chetankabra14th@gmail.com</a>
