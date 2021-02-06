@@ -1,0 +1,70 @@
+.job{
+    height: auto;
+    margin-top: -2%;
+    /* background: -webkit-linear-gradient(left, #f0f0f0, #b7efff); */
+}
+.contact-form{
+    border-radius: 5vh;
+    background: rgb(255, 255, 255);
+    margin-top: 4%;
+    margin-bottom: 5%;
+    width: 70%;
+    height: auto;
+    
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+  font-family: "Inter", sans-serif;
+  padding: 13%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h2{
+    font-weight: 700;
+    margin-bottom: 8%;
+    font-family: "Inter", sans-serif;
+    margin-top: -13%;
+    text-align: center;
+
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form .form-control .job_desc_inp{
+    height: 400vh;
+}
+
+textarea {
+    /* width: 3000px; */
+    height: 25.4vh;
+  }
