@@ -12,6 +12,18 @@
   /* background-color: rgb(207, 207, 207); */
 }
 
+@media screen and (max-width: 1024px), screen and(max-height:1366px) {
+  .back_custom {
+    flex-direction: column;
+    height: 170vh;
+  }
+  .home__info {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 170vh;
+  }
+}
+
 @media (max-width: 849px) {
   .back_custom {
     flex-direction: column;
@@ -124,8 +136,9 @@
 .design__logo {
   border-radius: 50%;
   z-index: -1;
-  background-color: rgba(236, 236, 236, 0.8);
-  height: 48vh;
+  padding: 11px;
+  background-color: rgb(247 247 247);
+  height: 55vh;
   /* width: 20.5vw; */
   margin-top: -4vh;
   margin-left: -1.8vw;

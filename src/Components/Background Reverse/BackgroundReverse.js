@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./BackgroundReverse.css";
-import Logo from "../Background/logo_transparent.png";
+import Logo from "./WhatsApp Image 2021-02-06 at 11.41.56 AM.jpeg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 

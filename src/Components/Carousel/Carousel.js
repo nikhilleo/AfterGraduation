@@ -36,7 +36,7 @@ import Carousal from "react-elastic-carousel";
 
 function Carousel() {
   return (
-    <div className="corosul__1" data-aos="fade-up-right" data-aos-offset="300">
+    <div className="corosul__1">
       <Carousal enableAutoPlay={true} autoPlaySpeed={5000}>
         <div className="slide">
           <div className="carousel_img">
@@ -53,14 +53,7 @@ function Carousel() {
               support Java without the need for recompilation.Java applications
               are typically compiled to bytecode that can run on any Java
               virtual machine (JVM) regardless of the underlying computer
-              architecture. The syntax of Java is similar to C and C++, but has
-              fewer low-level facilities than either of them. The Java runtime
-              provides dynamic capabilities (such as reflection and runtime code
-              modification) that are typically not available in traditional
-              compiled languages. As of 2019, Java was one of the most popular
-              programming languages in use according to GitHub,particularly for
-              client-server web applications, with a reported 9 million
-              developers.
+              architecture.
             </p>
           </div>
         </div>
@@ -94,14 +87,7 @@ function Carousel() {
               framework for mapping an object-oriented domain model to a
               relational database. Hibernate handles object-relational impedance
               mismatch problems by replacing direct, persistent database
-              accesses with high-level object handling functions. Hibernate is
-              free software that is distributed under the GNU Lesser General
-              Public License 2.1. Hibernate's primary feature is mapping from
-              Java classes to database tables, and mapping from Java data types
-              to SQL data types. Hibernate also provides data query and
-              retrieval facilities. It generates SQL calls and relieves the
-              developer from the manual handling and object conversion of the
-              result set.
+              accesses with high-level object handling functions.
             </p>
           </div>
         </div>
@@ -117,14 +103,7 @@ function Carousel() {
               data it holds.MySQL, the most popular Open Source SQL database
               management system, is developed, distributed, and supported by
               Oracle Corporation.MySQL is a database management system.A
-              database is a structured collection of data. It may be anything
-              from a simple shopping list to a picture gallery or the vast
-              amounts of information in a corporate network. To add, access, and
-              process data stored in a computer database, you need a database
-              management system such as MySQL Server. Since computers are very
-              good at handling large amounts of data, database management
-              systems play a central role in computing, as standalone utilities,
-              or as parts of other applications.
+              database is a structured collection of data.
             </p>
           </div>
         </div>
@@ -140,13 +119,7 @@ function Carousel() {
               flexible and loosely coupled web applications. The MVC pattern
               results in separating the different aspects of the application
               (input logic, business logic, and UI logic), while providing a
-              loose coupling between these elements.The Model encapsulates the
-              application data and in general they will consist of POJO.The View
-              is responsible for rendering the model data and in general it
-              generates HTML output that the client's browser can interpret.The
-              Controller is responsible for processing user requests and
-              building an appropriate model and passes it to the view for
-              rendering.
+              loose coupling between these elements.
             </p>
           </div>
           c
@@ -167,16 +140,7 @@ function Carousel() {
               Boot makes it easy to create stand-alone, production-grade Spring
               based Applications that you can "just run".We take an opinionated
               view of the Spring platform and third-party libraries so you can
-              get started with minimum fuss. Most Spring Boot applications need
-              minimal Spring configuration.Spring Boot provides a good platform
-              for Java developers to develop a stand-alone and production-grade
-              spring application that you can just run. You can get started with
-              minimum configurations without the need for an entire Spring
-              configuration setup.It provides a flexible way to configure Java
-              Beans, XML configurations, and Database Transactions.It provides a
-              powerful batch processing and manages REST endpoints.In Spring
-              Boot, everything is auto configured; no manual configurations are
-              needed.
+              get started with minimum fuss.
             </p>
           </div>
         </div>
@@ -229,15 +193,7 @@ function Carousel() {
               you able to create reactive Single Page Applications (SPAs). This
               is a leading front-end development framework which is regularly
               updated by Angular team of Google. Angular 7 is completely based
-              on components. It consists of several components forming a tree
-              structure with parent and child components. Google Supported
-              Community - Google actively supports Angular and its development.
-              Angular is used in various Google Apps.POJO based development -
-              Angular heavily used Plain Old JavaScript Object and it helps in
-              learning Angular in an easier way.Declarative User Interface -
-              Angular uses HTML as view language and extends its functionality.
-              It helps in handling UI vs code differentiation and UI is loosely
-              coupled with code.
+              on components.
             </p>
           </div>
         </div>
@@ -255,17 +211,7 @@ function Carousel() {
               for an hour, then during that hour, no one can collaborate at all.
               And even in a worst case, if the disk of the central server gets
               corrupted and proper backup has not been taken, then you will lose
-              the entire history of the project. Here, distributed version
-              control system (DVCS) comes into picture.DVCS clients not only
-              check out the latest snapshot of the directory but they also fully
-              mirror the repository. If the server goes down, then the
-              repository from any client can be copied back to the server to
-              restore it. Every checkout is a full backup of the repository. Git
-              does not rely on the central server and that is why you can
-              perform many operations when you are offline. You can commit
-              changes, create branches, view logs, and perform other operations
-              when you are offline. You require network connection only to
-              publish your changes and take the latest changes.
+              the entire history of the project.
             </p>
           </div>
         </div>

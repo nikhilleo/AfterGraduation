@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Axios from "../../axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 
 function Login() {
   const history = useHistory();
@@ -16,18 +20,23 @@ function Login() {
     console.log(data);
     Axios.post("/login", data)
       .then((res) => {
-        console.log(res);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", res.data.user.name);
-        alert("Login Successfully");
+        toast.info(`Logged in Successfully`, {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 3000,
+        });
         history.push("/");
       })
       .catch((err) => {
-        console.log(err.response);
+        toast.error(`User Not Found`, {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: false,
+        });
       });
   };
   return (
-    <div>
+    <div className="main_div_auth">
       <div class="container register">
         <div class="row">
           <div class="col-md-3 register-left">

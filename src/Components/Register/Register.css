@@ -9,6 +9,19 @@
   margin-top: 4%;
 }
 
+.main_div_auth {
+  animation: fadeAuth 2s;
+}
+
+@keyframes fadeAuth {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 /* #f1cdcd, #e5d6e6 */
 .register-left input {
   border: none;

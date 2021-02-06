@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./Register.css";
 import Axios from "../../axios";
 import { Link, useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 
 function Register() {
   const history = useHistory();
@@ -19,12 +23,18 @@ function Register() {
             console.log(res.data);
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", res.data.user.name);
-            alert("Registered");
+            toast.info(`Registered Successfully`, {
+              position: toast.POSITION.TOP_CENTER,
+              autoClose: 3000,
+            });
             history.push("/");
           }
         })
         .catch((err) => {
-          console.log(err.response);
+          toast.error(`${err.response.data}`, {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: false,
+          });
         });
     }
   };
@@ -40,7 +50,7 @@ function Register() {
     console.log(Data);
   };
   return (
-    <div>
+    <div className="main_div_auth">
       <div class="container register">
         <div class="row">
           <div class="col-md-3 register-left">

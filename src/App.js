@@ -3,10 +3,22 @@ import Navbar from "../src/Components/Navbar/Navbar";
 import Homepage from "../src/Components/HomePage/Homepage";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Register/Login";
-import Job from "./Components/Job/Job";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Job from "./Components/Job /Job";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom";
+import { Redirect } from "react-router";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Components/Footer";
+
+toast.configure();
 
 function App() {
+  const history = useHistory();
   return (
     <div className="App">
       <Router>
@@ -23,12 +35,33 @@ function App() {
             <Navbar />
             <Login />
           </Route>
+          <Route
+            exact
+            path="/Job"
+            render={() => {
+              if (localStorage.getItem("user")) {
+                return (
+                  <>
+                    <Navbar />
+                    <Job />
+                  </>
+                );
+              } else {
+                toast.error(`Please Login First`, {
+                  position: toast.POSITION.TOP_CENTER,
+                  autoClose: false,
+                });
+                return <Redirect to="/Login" />;
+              }
+            }}
+          />
           <Route exact path="/Job">
             <Navbar />
             <Job />
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
