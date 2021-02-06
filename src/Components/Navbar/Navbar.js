@@ -16,7 +16,7 @@ function Navbar() {
     <div>
       <nav>
         <Link to="/">
-          <img src={Logo} className="logo" />
+          <img src={Logo} className="logo1" />
         </Link>
         <ul
           className="nav-links"
