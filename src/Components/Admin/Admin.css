@@ -1,0 +1,11 @@
+
+body{
+  font-family: "Inter", sans-serif;
+}
+
+.admin_footer_reg{
+    background-color: aliceblue;
+    /* height: 100vh; */
+    background: -webkit-linear-gradient(left, #f1cdcd, #e5d6e6);
+    margin-top: -186vh !important;
+}
