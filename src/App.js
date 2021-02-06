@@ -26,14 +26,23 @@ function App() {
           <Route exact path="/">
             <Navbar />
             <Homepage />
+            <Footer />
           </Route>
           <Route exact path="/Register">
+            <div className="reg">
             <Navbar />
             <Register />
+            <div className="footer_reg">
+              <Footer />
+            </div>
+            </div>
           </Route>
           <Route exact path="/Login">
             <Navbar />
             <Login />
+            <div className="footer_reg">
+              <Footer />
+            </div>
           </Route>
           <Route
             exact
@@ -44,6 +53,9 @@ function App() {
                   <>
                     <Navbar />
                     <Job />
+                    <div className="footer_reg">
+                      <Footer />
+                    </div>
                   </>
                 );
               } else {
@@ -61,7 +73,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }
