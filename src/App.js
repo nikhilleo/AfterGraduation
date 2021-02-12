@@ -17,6 +17,7 @@ import Footer from "./Components/Footer";
 import AdminNavbar from "./Components/Admin Navbar/AdminNavbar";
 import Admin from "./Components/Admin/Admin";
 import RegisterdStudents from "./Components/RegisterdStudents/RegisterdStudents";
+import Verify from "./Components/Verify/Verify";
 
 toast.configure();
 
@@ -73,6 +74,10 @@ function App() {
           <Route exact path="/Job">
             <Navbar />
             <Job />
+          </Route>
+          <Route exact path="/verify">
+            <Navbar />
+            <Verify/>
           </Route>
           <Route exact path="/Admin/tyFAG8sBHkFc2pyZE7jJ47MSuas8496u4389hds98ds9bg">
             <Admin />
