@@ -21,13 +21,13 @@ function Register() {
         .then((res) => {
           if (res.data.message == "User Created") {
             console.log(res.data);
-            localStorage.setItem("token", res.data.token);
-            localStorage.setItem("user", res.data.user.name);
+            // localStorage.setItem("token", res.data.token);
+            // localStorage.setItem("user", res.data.user.name);
             toast(`Registered Successfully`, {
               position: toast.POSITION.TOP_CENTER,
               autoClose: 3000,
             });
-            history.push("/");
+            history.push("/Verify");
           }
         })
         .catch((err) => {
