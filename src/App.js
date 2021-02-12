@@ -33,11 +33,11 @@ function App() {
           </Route>
           <Route exact path="/Register">
             <div className="reg">
-            <Navbar />
-            <Register />
-            <div className="footer_reg">
-              <Footer />
-            </div>
+              <Navbar />
+              <Register />
+              <div className="footer_reg">
+                <Footer />
+              </div>
             </div>
           </Route>
           <Route exact path="/Login">
@@ -62,7 +62,7 @@ function App() {
                   </>
                 );
               } else {
-                toast.error(`Please Login First`, {
+                toast(`Please Login First`, {
                   position: toast.POSITION.TOP_CENTER,
                   autoClose: false,
                 });
@@ -75,11 +75,11 @@ function App() {
             <Job />
           </Route>
           <Route exact path="/Admin/tyFAG8sBHkFc2pyZE7jJ47MSuas8496u4389hds98ds9bg">
-            <Admin/>
+            <Admin />
           </Route>
           <Route exact path="/Admin/tyFAG8sBHkFc2pyZE7jJ47MSuas8496u4389hds98ds9bg/registered">
-            <AdminNavbar />  
-            <RegisterdStudents/>  
+            <AdminNavbar />
+            <RegisterdStudents />
           </Route>
         </Switch>
       </Router>

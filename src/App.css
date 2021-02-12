@@ -5,3 +5,8 @@
 .footer_reg{
     margin-top: -186vh !important;
 }
+
+.Toastify__toast--default {
+    color: white !important;
+    background-image: linear-gradient(to right , #4b134f, #c94b4b) !important;
+}

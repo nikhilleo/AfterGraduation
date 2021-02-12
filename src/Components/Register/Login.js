@@ -22,14 +22,14 @@ function Login() {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", res.data.user.name);
-        toast.info(`Logged in Successfully`, {
+        toast(`Logged in Successfully`, {
           position: toast.POSITION.TOP_CENTER,
           autoClose: 3000,
         });
         history.push("/");
       })
       .catch((err) => {
-        toast.error(`User Not Found`, {
+        toast(`User Not Found`, {
           position: toast.POSITION.TOP_CENTER,
           autoClose: false,
         });

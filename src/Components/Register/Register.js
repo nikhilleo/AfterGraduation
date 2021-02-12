@@ -23,7 +23,7 @@ function Register() {
             console.log(res.data);
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", res.data.user.name);
-            toast.info(`Registered Successfully`, {
+            toast(`Registered Successfully`, {
               position: toast.POSITION.TOP_CENTER,
               autoClose: 3000,
             });
@@ -31,7 +31,8 @@ function Register() {
           }
         })
         .catch((err) => {
-          toast.error(`${err.response.data}`, {
+          console.log(err.response)
+          toast(`${err.response.data}`, {
             position: toast.POSITION.TOP_CENTER,
             autoClose: false,
           });
