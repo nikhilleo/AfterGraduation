@@ -1,0 +1,11 @@
+.otp{
+    display: flex;
+    width: 100%;
+    /* background-color: aqua; */
+    padding: 1vh;
+    margin-left: 10vh;
+}
+
+.otp  div{
+    margin-left: 1.5vh;
+}
