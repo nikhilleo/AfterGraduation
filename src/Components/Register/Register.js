@@ -19,11 +19,12 @@ function Register() {
     } else {
       Axios.post("/signup", Data)
         .then((res) => {
-          if (res.data.message == "User Created") {
+          if (res.data.message == "OTP Sent") {
             console.log(res.data);
-            // localStorage.setItem("token", res.data.token);
-            // localStorage.setItem("user", res.data.user.name);
-            toast(`Registered Successfully`, {
+            // localStorage.setItem("name", res.data.user.name);
+            localStorage.setItem("userData", JSON.stringify(res.data.user));
+            localStorage.setItem("otp",res.data.otp);
+            toast(`Email Sent Verify OTP`, {
               position: toast.POSITION.TOP_CENTER,
               autoClose: 3000,
             });
