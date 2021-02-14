@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import Axios from "../../axios";
 import "./Verify.css"
 
 function Verify() {
 
     const [OTP, setOTP] = useState({});
 
-    const [children, setchildren] = useState([])
+    const [toVerifyData, setVerifyData] = useState({});
+
+    const [children, setchildren] = useState([]);
 
     const [sendOTP, setsendOTP] = useState("")
 
@@ -20,6 +23,19 @@ function Verify() {
     const handleSubmit = (e)=>{
       e.preventDefault();
       console.log(sendOTP);
+      const user = localStorage.getItem("userData");
+      const otp = localStorage.getItem("otp");
+      toVerifyData.user = user
+      toVerifyData.otp_id = otp;
+      toVerifyData.otp = sendOTP;
+      console.log(toVerifyData);
+      Axios.post("/verify",toVerifyData)
+      .then((res)=>{
+        console.log(res.data)
+      })
+      .catch((err)=>{
+        console.log(err.response)
+      })
       // 8666871848
       // localStorage.setItem("token", res.data.token);
       // localStorage.setItem("user", res.data.user.name);
