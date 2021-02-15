@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Axios from "../../axios";
 import "./Verify.css"
 
 function Verify() {
+
+    const history = useHistory();
 
     const [OTP, setOTP] = useState({});
 
@@ -14,6 +18,8 @@ function Verify() {
 
     const [cnt, setcnt] = useState(0);
 
+    const [val, setVal] = useState();
+
     useEffect(() => {
       var cntInp = document.getElementsByClassName("otp");
       // console.log(cntInp[0].children);
@@ -22,30 +28,49 @@ function Verify() {
 
     const handleSubmit = (e)=>{
       e.preventDefault();
-      console.log(sendOTP);
       const user = localStorage.getItem("userData");
       const otp = localStorage.getItem("otp");
       toVerifyData.user = user
       toVerifyData.otp_id = otp;
       toVerifyData.otp = sendOTP;
-      console.log(toVerifyData);
       Axios.post("/verify",toVerifyData)
       .then((res)=>{
-        console.log(res.data)
+
+        localStorage.clear();
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user", res.data.user.name);
+        history.push("/");
+        toast(`Registered !`, {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 3000,
+        });
       })
       .catch((err)=>{
-        console.log(err.response)
+        // window.location.reload();
+        setTimeout(toast(`${err.response.data}`, {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 3000,
+        }),10000) 
+        setcnt(0);
+        setsendOTP("")
+        setOTP({});
+        setVal("");
+        var cntInp = document.getElementsByClassName("otp");
+        setchildren(cntInp[0].children);
       })
+      // // console.log(cntInp[0].children);
       // 8666871848
       // localStorage.setItem("token", res.data.token);
       // localStorage.setItem("user", res.data.user.name);
     }
 
     const handleChange = (e)=>{
+      // this.setVal(e.target.value);
       setOTP((prevState)=>({
         ...prevState,
         [e.target.name]:e.target.value
       }));
+      e.target.value = e.target.value;
       setcnt(cnt+1)
       // console.log(cnt);
       if(cnt<5){
@@ -98,6 +123,7 @@ function Verify() {
                       <div className="otp">
                         <div class="form-group ">
                           <input
+                            value={val}
                             type="email"
                             class="form-control"
                             placeholder="*"
@@ -109,6 +135,7 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
+                            value={val}
                             type="email"
                             class="form-control"
                             placeholder="*"
@@ -120,6 +147,7 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
+                            value={val}
                             type="email"
                             class="form-control"
                             placeholder="*"
@@ -131,6 +159,7 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
+                            value={val}
                             type="email"
                             class="form-control"
                             placeholder="*"
@@ -142,6 +171,7 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
+                            value={val}
                             type="email"
                             class="form-control"
                             placeholder="*"
@@ -153,6 +183,7 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
+                            value={val}
                             type="email"
                             class="form-control"
                             placeholder="*"
