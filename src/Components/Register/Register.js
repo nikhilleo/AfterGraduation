@@ -20,11 +20,10 @@ function Register() {
       Axios.post("/signup", Data)
         .then((res) => {
           if (res.data.message == "OTP Sent") {
-            console.log(res.data);
             // localStorage.setItem("name", res.data.user.name);
             localStorage.setItem("userData", JSON.stringify(res.data.user));
             localStorage.setItem("otp",res.data.otp);
-            toast(`Email Sent Verify OTP`, {
+            toast(`OTP Sent To Your Given Email (Check SPAM Folder)`, {
               position: toast.POSITION.TOP_CENTER,
               autoClose: 3000,
             });
@@ -32,7 +31,6 @@ function Register() {
           }
         })
         .catch((err) => {
-          console.log(err.response)
           toast(`${err.response.data}`, {
             position: toast.POSITION.TOP_CENTER,
             autoClose: false,
@@ -42,14 +40,12 @@ function Register() {
   };
 
   const handleChange = (e) => {
-    console.log(e.target);
     setData((prevstate) => {
       return {
         ...prevstate,
         [e.target.name]: e.target.value,
       };
     });
-    console.log(Data);
   };
   return (
     <div className="main_div_auth">
