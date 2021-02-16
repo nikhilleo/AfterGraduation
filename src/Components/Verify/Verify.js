@@ -124,7 +124,7 @@ function Verify() {
                         <div class="form-group ">
                           <input
                             value={val}
-                            type="email"
+                            type="text"
                             class="form-control"
                             placeholder="*"
                             maxlength="1"
@@ -136,7 +136,7 @@ function Verify() {
                         <div class="form-group ">
                           <input
                             value={val}
-                            type="email"
+                            type="text"
                             class="form-control"
                             placeholder="*"
                             name="otp-2"
@@ -148,7 +148,7 @@ function Verify() {
                         <div class="form-group ">
                           <input
                             value={val}
-                            type="email"
+                            type="text"
                             class="form-control"
                             placeholder="*"
                             name="otp-3"
@@ -160,7 +160,7 @@ function Verify() {
                         <div class="form-group ">
                           <input
                             value={val}
-                            type="email"
+                            type="text"
                             class="form-control"
                             placeholder="*"
                             name="otp-4"
@@ -172,7 +172,7 @@ function Verify() {
                         <div class="form-group ">
                           <input
                             value={val}
-                            type="email"
+                            type="text"
                             class="form-control"
                             placeholder="*"
                             name="otp-5"
@@ -184,7 +184,7 @@ function Verify() {
                         <div class="form-group ">
                           <input
                             value={val}
-                            type="email"
+                            type="text"
                             class="form-control"
                             placeholder="*"
                             name="otp-6"
