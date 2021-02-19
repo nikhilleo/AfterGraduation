@@ -13,7 +13,11 @@ function Register() {
   const [Data, setData] = useState({});
 
   const handleSubmit = (e) => {
+    localStorage.clear();
     e.preventDefault();
+    var button = document.getElementsByClassName("btnRegister");
+    console.log(button[0]);
+    button[0].disabled = true
     if (!Data.gender) {
       alert("Select Gender");
     } else {
@@ -22,7 +26,7 @@ function Register() {
           if (res.data.message == "OTP Sent") {
             // localStorage.setItem("name", res.data.user.name);
             localStorage.setItem("userData", JSON.stringify(res.data.user));
-            localStorage.setItem("otp",res.data.otp);
+            localStorage.setItem("otp", res.data.otp);
             toast(`OTP Sent To Your Given Email (Check SPAM Folder)`, {
               position: toast.POSITION.TOP_CENTER,
               autoClose: 3000,
@@ -31,6 +35,7 @@ function Register() {
           }
         })
         .catch((err) => {
+          console.log(err)
           toast(`${err.response.data}`, {
             position: toast.POSITION.TOP_CENTER,
             autoClose: false,
