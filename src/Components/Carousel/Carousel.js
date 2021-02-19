@@ -9,6 +9,7 @@ import WS from "./Web Services.png";
 import MICRO from "./MICRO.png";
 import Angular from "./Angular.png";
 import GIT from "./GITHUB.png";
+import POSTMAN from "./Postman.png";
 import JEERA from "./Jira Software@2x-blue.png";
 import Carousal from "react-elastic-carousel";
 
@@ -104,6 +105,25 @@ function Carousel() {
               management system, is developed, distributed, and supported by
               Oracle Corporation.MySQL is a database management system.A
               database is a structured collection of data.
+            </p>
+          </div>
+        </div>
+        <div className="slide">
+          <div className="carousel_img">
+            <img src={POSTMAN} alt="" />
+          </div>
+          <div className="carousel_info">
+            <h3>Postman</h3>
+            <p>
+            Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs—faster.
+            <br/>
+            <strong>Features:</strong>
+            <br/>
+            API Client : Quickly and easily send REST, SOAP, and GraphQL requests directly within Postman.
+            <br/>
+            Automated Testing : Automate manual tests and integrate them into your CI/CD pipeline to ensure that any code changes won't break the API in production.
+            <br/>
+            Documentation : Generate and publish beautiful, machine-readable documentation to make your API easier to consume.
             </p>
           </div>
         </div>
