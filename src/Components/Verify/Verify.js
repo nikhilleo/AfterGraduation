@@ -20,6 +20,25 @@ function Verify() {
 
     const [val, setVal] = useState();
 
+    const [valid, setValid] = useState(false);
+
+    const [check, setCheck] = useState();
+
+    const show = ()=>{
+      setCheck(false);
+      setValid(false)
+    }
+
+    useEffect(()=>{
+      if(valid)
+      {
+        alert("Wrong OTP");
+        window.location.reload();
+        show();
+      }
+    },[valid])
+
+
     useEffect(() => {
       var cntInp = document.getElementsByClassName("otp");
       // console.log(cntInp[0].children);
@@ -47,14 +66,11 @@ function Verify() {
       })
       .catch((err)=>{
         // window.location.reload();
-        setTimeout(toast(`${err.response.data}`, {
-          position: toast.POSITION.TOP_CENTER,
-          autoClose: 3000,
-        }),10000) 
+
         setcnt(0);
         setsendOTP("")
         setOTP({});
-        setVal("");
+        setValid(true)
         var cntInp = document.getElementsByClassName("otp");
         setchildren(cntInp[0].children);
       })
@@ -78,10 +94,12 @@ function Verify() {
         // console.log(children[cnt].children[0].attributes.NamedNodeMap)
         // console.log(children[cnt])
         children[cnt+1].children[0].focus();
+        children[cnt].children[0].value = e.target.value
         // console.log(cnt);
       }
       else
       {
+        // children[cnt].children[0].value = e.target.value
         // console.log(cnt);
         // console.log("else");
       }
@@ -123,7 +141,6 @@ function Verify() {
                       <div className="otp">
                         <div class="form-group ">
                           <input
-                            value={val}
                             type="text"
                             class="form-control"
                             placeholder="*"
@@ -135,7 +152,6 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
-                            value={val}
                             type="text"
                             class="form-control"
                             placeholder="*"
@@ -147,7 +163,6 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
-                            value={val}
                             type="text"
                             class="form-control"
                             placeholder="*"
@@ -159,7 +174,6 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
-                            value={val}
                             type="text"
                             class="form-control"
                             placeholder="*"
@@ -171,7 +185,6 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
-                            value={val}
                             type="text"
                             class="form-control"
                             placeholder="*"
@@ -183,7 +196,6 @@ function Verify() {
                         </div>
                         <div class="form-group ">
                           <input
-                            value={val}
                             type="text"
                             class="form-control"
                             placeholder="*"
