@@ -2,9 +2,123 @@
     display: flex;
     width: 100%;
     padding: 1vh;
-    margin-left: 10vh;
+    margin-left: -10vh;
 }
 
 .otp  div{
     margin-left: 1.5vh;
 }
+
+.form > input{
+    font-size: 2rem;
+}
+
+.form{
+    margin-left: -100vw;
+    /* padding: 1vw; */
+}
+
+.form > span{
+    margin-left: 1vh;
+    font-size:40px;
+}
+
+
+.form > input{
+    text-align: left;
+    /* padding: 1vw 1.5vw; */
+    /* height: 50px; */
+    /* width: 31rem; */
+}
+
+
+
+@media (max-width: 411px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -7vw;
+    }
+  }
+
+
+@media (max-width: 375px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -18vw;
+    }
+  }
+
+
+
+@media (max-width: 326px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -15vw;
+    }
+    .form > input{
+        font-size: 1rem;
+    }
+    
+  }
+
+  @media (min-width: 540px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: 7vw;
+    }
+    
+  }
+
+  @media (max-width: 360px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -11vw;
+    }
+    
+  }
+
+
+  
+@media (max-width: 271px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -18vw;
+    }
+    .form > input{
+        font-size: 1rem;
+    }
+    
+  }
+
+
+@media (min-width: 768px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -4vw;
+    }
+  }
+
+
+
+@media (min-width: 756px) {
+    .otp{
+        display: flex;
+        width: 100%;
+        padding: 1vh;
+        margin-left: -1vw;
+    }
+  }
