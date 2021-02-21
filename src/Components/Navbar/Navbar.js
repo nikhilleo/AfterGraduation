@@ -4,9 +4,13 @@ import { Link, useHistory } from "react-router-dom";
 import Logo from "../Background/logo_transparent.png";
 
 function Navbar() {
+  
+  const history = useHistory();
+
+
   const handleLogout = () => {
-    var txt;
     window.location.reload();
+    history.push("/");
     localStorage.clear();
   };
 
