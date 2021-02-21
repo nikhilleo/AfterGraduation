@@ -20,6 +20,9 @@ function Register() {
     button[0].disabled = true
     if (!Data.gender) {
       alert("Select Gender");
+      var button = document.getElementsByClassName("btnRegister");
+      console.log(button[0]);
+      button[0].disabled = false
     } else {
       Axios.post("/signup", Data)
         .then((res) => {
@@ -36,7 +39,10 @@ function Register() {
         })
         .catch((err) => {
           console.log(err)
-          toast(`${err.response.data}`, {
+          var button = document.getElementsByClassName("btnRegister");
+          console.log(button[0]);
+          button[0].disabled = false
+          toast(`${err?.response?.data}`, {
             position: toast.POSITION.TOP_CENTER,
             autoClose: false,
           });
